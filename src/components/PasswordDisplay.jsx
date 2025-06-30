@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PasswordStrength from "./PasswordStrength";
 
 const PasswordDisplay = ({ password }) => {
   const [copied, setCopied] = useState(false);
@@ -49,6 +50,8 @@ const PasswordDisplay = ({ password }) => {
             </>
           )}
         </button>
+        
+        <PasswordStrength password={password} />
       </div>
     </div>
   );

@@ -261,6 +261,92 @@ body {
   background: var(--success-color);
 }
 
+/* Password Strength Styles */
+.password-strength {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: var(--bg-color);
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+}
+
+.strength-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.strength-label {
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.strength-text {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.strength-meter {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 1rem;
+  height: 8px;
+}
+
+.strength-bar {
+  flex: 1;
+  height: 100%;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.strength-bar.active {
+  transform: scaleY(1.2);
+}
+
+.strength-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.strength-score {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.strength-tips {
+  padding: 0.75rem;
+  background: var(--card-bg);
+  border-radius: 6px;
+  border-left: 4px solid var(--primary-color);
+}
+
+.tips-title {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--primary-color);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.tips-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  font-size: 0.85rem;
+  color: var(--text-color);
+  opacity: 0.9;
+}
+
+.tips-list li {
+  margin-bottom: 0.25rem;
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 0.5rem;
@@ -285,6 +371,20 @@ body {
   
   .slider-value {
     align-self: center;
+  }
+  
+  .strength-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .strength-details {
+    gap: 0.5rem;
+  }
+  
+  .tips-list {
+    font-size: 0.8rem;
   }
 }
 
